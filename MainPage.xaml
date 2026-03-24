@@ -1,0 +1,109 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="DeliveryApp.MainPage"
+             Title="Delivery Center"
+             BackgroundColor="#F5F5F5">
+
+    <ScrollView>
+        <VerticalStackLayout Padding="20" Spacing="15">
+
+            <Label Text="Recent Orders" FontSize="22" FontAttributes="Bold" TextColor="#333"/>
+
+            <!-- 当前位置卡片 -->
+            <Border Stroke="LightGray" StrokeThickness="1" StrokeShape="RoundRectangle 8" BackgroundColor="White" Padding="15">
+                <VerticalStackLayout Spacing="5">
+                    <Label Text="Current Location" FontSize="16"/>
+                    <Label x:Name="LocationLabel" 
+                           Text="Latitude: 27.845931&#10;Longitude: 112.922089" 
+                           FontSize="14" 
+                           TextColor="#666"
+                           LineBreakMode="WordWrap"/>
+                </VerticalStackLayout>
+            </Border>
+
+            <!-- ORDER001 卡片（可点击） -->
+            <Border Stroke="LightGray" StrokeThickness="1" StrokeShape="RoundRectangle 8" BackgroundColor="White" Padding="15">
+                <Grid>
+                    <Grid.ColumnDefinitions>
+                        <ColumnDefinition Width="*"/>
+                        <ColumnDefinition Width="Auto"/>
+                    </Grid.ColumnDefinitions>
+                    <VerticalStackLayout Grid.Column="0" Spacing="5">
+                        <Label Text="ORDER001" FontSize="16" FontAttributes="Bold" TextColor="#333"/>
+                        <Label Text="Zhang San" FontSize="14" TextColor="#666"/>
+                        <Label Text="XX Community 1-2-301" FontSize="14" TextColor="#666"/>
+                        <Label Text="2026/3/23 4:49:10" FontSize="12" TextColor="#999"/>
+                    </VerticalStackLayout>
+                    <VerticalStackLayout Grid.Column="1" Spacing="5" HorizontalOptions="End">
+                        <Label Text="Food" TextColor="#0078D4" FontSize="12" HorizontalOptions="End"/>
+                    </VerticalStackLayout>
+                </Grid>
+                <Border.GestureRecognizers>
+                    <TapGestureRecognizer Tapped="OnOrderTapped" CommandParameter="ORDER001"/>
+                </Border.GestureRecognizers>
+            </Border>
+
+            <!-- ORDER002 卡片（可点击） -->
+            <Border Stroke="LightGray" StrokeThickness="1" StrokeShape="RoundRectangle 8" BackgroundColor="White" Padding="15">
+                <Grid>
+                    <Grid.ColumnDefinitions>
+                        <ColumnDefinition Width="*"/>
+                        <ColumnDefinition Width="Auto"/>
+                    </Grid.ColumnDefinitions>
+                    <VerticalStackLayout Grid.Column="0" Spacing="5">
+                        <Label Text="ORDER002" FontSize="16" FontAttributes="Bold" TextColor="#333"/>
+                        <Label Text="Li Si" FontSize="14" TextColor="#666"/>
+                        <Label Text="YY Building 5F" FontSize="14" TextColor="#666"/>
+                        <Label Text="2026/3/23 7:49:10" FontSize="12" TextColor="#999"/>
+                    </VerticalStackLayout>
+                    <VerticalStackLayout Grid.Column="1" Spacing="5" HorizontalOptions="End">
+                        <Label Text="Package" TextColor="#0078D4" FontSize="12" HorizontalOptions="End"/>
+                    </VerticalStackLayout>
+                </Grid>
+                <Border.GestureRecognizers>
+                    <TapGestureRecognizer Tapped="OnOrderTapped" CommandParameter="ORDER002"/>
+                </Border.GestureRecognizers>
+            </Border>
+
+            <!-- ORDER003 卡片（可点击） -->
+            <Border Stroke="LightGray" StrokeThickness="1" StrokeShape="RoundRectangle 8" BackgroundColor="White" Padding="15">
+                <Grid>
+                    <Grid.ColumnDefinitions>
+                        <ColumnDefinition Width="*"/>
+                        <ColumnDefinition Width="Auto"/>
+                    </Grid.ColumnDefinitions>
+                    <VerticalStackLayout Grid.Column="0" Spacing="5">
+                        <Label Text="ORDER003" FontSize="16" FontAttributes="Bold" TextColor="#333"/>
+                        <Label Text="Wang Wu" FontSize="14" TextColor="#666"/>
+                        <Label Text="ZZ Street 78" FontSize="14" TextColor="#666"/>
+                        <Label Text="2026/3/23 1:49:10" FontSize="12" TextColor="#999"/>
+                    </VerticalStackLayout>
+                    <VerticalStackLayout Grid.Column="1" Spacing="5" HorizontalOptions="End">
+                        <Label Text="Food" TextColor="#0078D4" FontSize="12" HorizontalOptions="End"/>
+                    </VerticalStackLayout>
+                </Grid>
+                <Border.GestureRecognizers>
+                    <TapGestureRecognizer Tapped="OnOrderTapped" CommandParameter="ORDER003"/>
+                </Border.GestureRecognizers>
+            </Border>
+
+            <!-- 底部新增两个按钮：Order / Detail -->
+            <Grid Margin="0,20,0,0" ColumnSpacing="10">
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition Width="*"/>
+                    <ColumnDefinition Width="*"/>
+                </Grid.ColumnDefinitions>
+                <Button Grid.Column="0" Text="Order" 
+                        BackgroundColor="#0078D4" TextColor="White"
+                        CornerRadius="20" HeightRequest="50"/>
+                <Button Grid.Column="1" Text="Detail" 
+                        BackgroundColor="#0078D4" TextColor="White"
+                        CornerRadius="20" HeightRequest="50"
+                        Clicked="OnDetailClicked"/>
+            </Grid>
+
+        </VerticalStackLayout>
+    </ScrollView>
+
+</ContentPage>

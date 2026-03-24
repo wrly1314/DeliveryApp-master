@@ -1,0 +1,17 @@
+﻿# Visual Studio 缓存目录
+.vs/
+*.suo
+*.user
+
+# 编译输出目录
+bin/
+obj/
+
+# Copilot & IntelliSense 缓存
+CopilotIndices/
+FileContentIndex/
+*.dtbcache.v2
+
+# 操作系统生成的文件
+.DS_Store
+Thumbs.db

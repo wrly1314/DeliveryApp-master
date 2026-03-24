@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="DeliveryApp.DeliveryDetailPage"
+             Title="Delivery Details"
+             BackgroundColor="#F5F5F5">
+
+    <ScrollView>
+        <VerticalStackLayout Margin="20" Spacing="15">
+
+            <Button Text="← Back" Clicked="OnBackClicked"
+                    BackgroundColor="Transparent" TextColor="#0078D4"
+                    HorizontalOptions="Start" Padding="0"/>
+
+            <Label Text="Delivery Details" FontSize="20" FontAttributes="Bold" TextColor="Black"/>
+
+            <!-- 订单信息 -->
+            <Border Stroke="LightGray" StrokeThickness="1" StrokeShape="RoundRectangle 8"
+                    Margin="0,10" Padding="15" BackgroundColor="White">
+                <VerticalStackLayout Spacing="8">
+                    <Label Text="Order Information" FontSize="16" FontAttributes="Bold" TextColor="Black"/>
+                    <Label Text="Order ID: ORD20260323001" FontSize="14" TextColor="Black"/>
+                    <Label Text="Type: Express Delivery" FontSize="14" TextColor="Black"/>
+                    <Label Text="Receiver: Li Hua" FontSize="14" TextColor="Black"/>
+                    <Label Text="Address: No.88 Xiangjiang Road, Yuelu District, Changsha, Hunan, China" FontSize="14" TextColor="Black"/>
+                    <Label Text="Status: Delivering" FontSize="14" TextColor="Black"/>
+                    <Label Text="Time: 2026/03/23 15:30:00" FontSize="14" TextColor="Black"/>
+                </VerticalStackLayout>
+            </Border>
+
+            <!-- GPS 位置 -->
+            <Border Stroke="LightGray" StrokeThickness="1" StrokeShape="RoundRectangle 8"
+                    Margin="0,10" Padding="15" BackgroundColor="White">
+                <VerticalStackLayout Spacing="8">
+                    <Label Text="Real-time GPS Location" FontSize="16" FontAttributes="Bold" TextColor="Black"/>
+                    <Border StrokeShape="RoundRectangle 8"
+                            HeightRequest="200" BackgroundColor="#E8F5E9">
+                        <Label Text="📍" FontSize="40" HorizontalOptions="Center" VerticalOptions="Center"/>
+                    </Border>
+                    <Button x:Name="ShareLocationBtn" Text="Share Location"
+                            BackgroundColor="#0078D4" TextColor="White" CornerRadius="6"
+                            Clicked="OnShareLocationClicked"/>
+                </VerticalStackLayout>
+            </Border>
+
+        </VerticalStackLayout>
+    </ScrollView>
+
+</ContentPage>

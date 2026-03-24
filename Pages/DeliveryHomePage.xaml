@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="DeliveryApp.Pages.DeliveryHomePage"
+             Title="配送员首页">
+
+    <!-- 临时测试内容：确保没有空的 StaticResource -->
+    <VerticalStackLayout Padding="20" Spacing="20">
+        <Label Text="配送员首页" FontSize="24" FontAttributes="Bold"/>
+        <Button Text="测试按钮" BackgroundColor="#2196F3" TextColor="White"/>
+    </VerticalStackLayout>
+
+</ContentPage>
